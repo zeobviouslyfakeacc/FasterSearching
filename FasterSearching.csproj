@@ -45,6 +45,9 @@
     <Reference Include="MelonLoader.ModHandler">
       <Private>False</Private>
     </Reference>
+    <Reference Include="ModSettings">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="UnhollowerBaseLib">
       <Private>False</Private>
@@ -58,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FasterSearchingMod.cs" />
+    <Compile Include="FasterSearchingSettings.cs" />
     <Compile Include="PatchFasterSearch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

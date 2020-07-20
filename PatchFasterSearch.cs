@@ -7,10 +7,10 @@ namespace FasterSearching {
 	internal static class PatchFasterSearch {
 
 		static void Prefix(ref float searchTimeSeconds, ref Container __instance) {
-			if (__instance.m_Items.Count == 0) {
+			if (__instance.m_Items.Count == 0 && FasterSearchingSettings.Instance.instantlySearchEmpty) {
 				searchTimeSeconds = 0f;
 			} else {
-				searchTimeSeconds *= 0.3f;
+				searchTimeSeconds *= FasterSearchingSettings.Instance.searchTimeMultiplier;
 			}
 		}
 	}
