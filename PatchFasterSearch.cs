@@ -1,17 +1,18 @@
-﻿using Harmony;
+﻿using HarmonyLib;
+using Il2Cpp;
 
 namespace FasterSearching {
 
-	[HarmonyPatch(typeof(Container))]
-	[HarmonyPatch("BeginContainerInteraction")]
-	internal static class PatchFasterSearch {
-
-		static void Prefix(ref float searchTimeSeconds, ref Container __instance) {
-			if (__instance.m_Items.Count == 0 && FasterSearchingSettings.Instance.instantlySearchEmpty) {
-				searchTimeSeconds = 0f;
-			} else {
-				searchTimeSeconds *= FasterSearchingSettings.Instance.searchTimeMultiplier;
-			}
-		}
-	}
+    [HarmonyPatch(typeof(ContainerInteraction), "PerformHold")]
+    internal static class PatchFasterSearchUpdated
+    {
+        static void Postfix(ref ContainerInteraction __instance)
+        {
+            if (__instance.m_Container.m_Items.Count == 0 && FasterSearchingSettings.Instance.instantlySearchEmpty)
+            {
+                __instance.HoldTime = 0;
+            }
+            else __instance.HoldTime *= FasterSearchingSettings.Instance.searchTimeMultiplier;
+        }
+    }
 }
