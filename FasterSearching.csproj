@@ -26,11 +26,7 @@
 	<ItemGroup>
 		<!--This package contains almost everything a person could possibly need to reference while modding.-->
 		<PackageReference Include="ds5678.Modding.TLD.Il2CppAssemblies.Windows" Version="2.6.0" />
+		<PackageReference Include="ds5678.Modding.TLD.ModSettings" Version="1.9.0" />
 		<!--If the mod references any other mods (such as ModSettings), their NuGet package will also need to be listed here.-->
-	</ItemGroup>
-	<ItemGroup>
-	  <Reference Include="ModSettings">
-	    <HintPath>..\..\..\..\..\..\SteamLibrary\steamapps\common\TheLongDark\Mods\ModSettings.dll</HintPath>
-	  </Reference>
 	</ItemGroup>
 </Project>
