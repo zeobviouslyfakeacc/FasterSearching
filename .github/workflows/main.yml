@@ -29,5 +29,5 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: FasterSearching
-        path: FasterSearching/bin/Release/net6.0/FasterSearching.dll
+        path: ./bin/Release/net6.0/FasterSearching.dll
         if-no-files-found: error
