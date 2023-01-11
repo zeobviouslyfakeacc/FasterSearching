@@ -9,10 +9,14 @@ namespace FasterSearching {
 			ContainerInteraction interaction = __instance.GetComponent<ContainerInteraction>();
 			if (interaction == null) return;
 
-			if (__instance.m_GearToInstantiate.Count == 0 && !__instance.IsInspected() && FasterSearchingSettings.Instance.instantlySearchEmpty) {
-				interaction.HoldTime = 0;
+			if (__instance.IsInspected()) {
+				interaction.HoldTime *= FasterSearchingSettings.Instance.openTimeMultiplier;
 			} else {
-				interaction.HoldTime *= FasterSearchingSettings.Instance.searchTimeMultiplier;
+				if (__instance.m_GearToInstantiate.Count == 0 && FasterSearchingSettings.Instance.instantlySearchEmpty) {
+					interaction.HoldTime = 0;
+				} else {
+					interaction.HoldTime *= FasterSearchingSettings.Instance.searchTimeMultiplier;
+				}
 			}
 		}
 	}
