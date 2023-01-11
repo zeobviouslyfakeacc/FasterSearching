@@ -14,5 +14,5 @@ using System.Runtime.InteropServices;
 [assembly: Guid("5a0ed540-5e6d-49ff-a283-be38391e50ce")]
 [assembly: AssemblyVersion("1.2.0.0")]
 [assembly: AssemblyFileVersion("1.2.0.0")]
-[assembly: MelonInfo(typeof(FasterSearching.FasterSearchingMod), "FasterSearching", $"1.2.0.0", "MikeyPdog, zeobviouslyfakeacc")]
+[assembly: MelonInfo(typeof(FasterSearching.FasterSearchingMod), "FasterSearching", "1.2", "MikeyPdog, zeobviouslyfakeacc")]
 [assembly: MelonGame("Hinterland", "TheLongDark")]
