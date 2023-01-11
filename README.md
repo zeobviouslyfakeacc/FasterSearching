@@ -7,7 +7,7 @@ Configurable using [ModSettings](https://github.com/zeobviouslyfakeacc/ModSettin
 ## Installation
 
 1. If you haven't done so already, install MelonLoader by downloading and running [MelonLoader.Installer.exe](https://github.com/HerpDerpinstine/MelonLoader/releases/latest/download/MelonLoader.Installer.exe)
-2. If you haven't done so already, install [ModSettings](https://github.com/zeobviouslyfakeacc/ModSettings) v1.6 or newer
+2. If you haven't done so already, install [ModSettings](https://github.com/zeobviouslyfakeacc/ModSettings) v1.9.0 or newer
 3. Download the latest version of `FasterSearching.dll` from the [releases page](https://github.com/zeobviouslyfakeacc/FasterSearching/releases)
 4. Move `FasterSearching.dll` into the Mods folder in your TLD install directory
 
