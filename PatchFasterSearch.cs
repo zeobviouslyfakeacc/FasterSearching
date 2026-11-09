@@ -12,7 +12,7 @@ namespace FasterSearching {
 			if (__instance.IsInspected()) {
 				interaction.HoldTime *= FasterSearchingSettings.Instance.openTimeMultiplier;
 			} else {
-				if (__instance.m_GearToInstantiate.Count == 0 && FasterSearchingSettings.Instance.instantlySearchEmpty) {
+				if (__instance.IsEmpty() && FasterSearchingSettings.Instance.instantlySearchEmpty) {
 					interaction.HoldTime = 0;
 				} else {
 					interaction.HoldTime *= FasterSearchingSettings.Instance.searchTimeMultiplier;
